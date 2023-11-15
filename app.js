@@ -1,3 +1,3 @@
-console.log('Hello IRKA')
+console.log('Hello PAVEL')
 
 //  17 урок !!!!
