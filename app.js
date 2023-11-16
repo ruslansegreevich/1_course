@@ -1,5 +1,5 @@
 // 25 урок, задача
-result = prompt('Сколько будет 7 + или - 15 ?');
+const result = prompt('Сколько будет 7 + или - 15 ?');
 
 if (Number(result) === 22) {
     console.log('Успех');
@@ -8,7 +8,7 @@ if (Number(result) === 22) {
 } else if (result === 'Я не робот') {
     console.log('Успех');
 } else {
-    console.log('Ты РОБОТ !!!')
+    console.log('Ты РОБОТ !!!');
 }
 
 switch (result) {
