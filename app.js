@@ -1,12 +1,27 @@
-const deposit = 12000;
-const percent = 7 / 100;
-const house = 13500;
+// 25 урок, задача
+result = prompt('Сколько будет 7 + или - 15 ?');
 
-const finalDeposit = deposit * (1 + (percent / 12)) ** 24;
-
-if (finalDeposit >= house) {
-    console.log(`Вы можете купить дом и у Вас останется: ${finalDeposit - house} $`);
+if (Number(result) === 22) {
+    console.log('Успех');
+} else if (Number(result) === -8) {
+    console.log('Успех');
+} else if (result === 'Я не робот') {
+    console.log('Успех');
+} else {
+    console.log('Ты РОБОТ !!!')
 }
-else {
-    console.log(`Вы не можете купить дом, у Вас : ${finalDeposit} $`);
+
+switch (result) {
+    case 'Я не робот':
+        console.log('Успех');
+        break;
+    case '22':
+        console.log('Успех');
+        break;
+    case '-8':
+        console.log('Успех');
+        break;
+
+    default:
+        console.log('Ты РОБОТ !!!');
 }
