@@ -1,27 +1,17 @@
-// 25 урок, задача
-const result = prompt('Сколько будет 7 + или - 15 ?');
+let balance = 100;
+let bonusBalance = 900;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
 
-if (Number(result) === 22) {
-    console.log('Успех');
-} else if (Number(result) === -8) {
-    console.log('Успех');
-} else if (result === 'Я не робот') {
-    console.log('Успех');
+if (Number(balance) > 1000 || Number(bonusBalance) > 100 && isBanned === false && isExist === false && isSelling === true) {
+    console.log('Польтзователь может купить игру !!!');
 } else {
-    console.log('Ты РОБОТ !!!');
+    console.log('Пользователь не может купить игру !!!');
 }
 
-switch (result) {
-    case 'Я не робот':
-        console.log('Успех');
-        break;
-    case '22':
-        console.log('Успех');
-        break;
-    case '-8':
-        console.log('Успех');
-        break;
-
-    default:
-        console.log('Ты РОБОТ !!!');
-}
+const canBuy = (balance > 1000 || bonusBalance > 100)
+    && !isBanned
+    && !isExist
+    && isSelling;
+console.log(`Могу купить игру: ${canBuy ? 'Да' : 'нет'}`);
