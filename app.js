@@ -1,16 +1,32 @@
 /*
-    Задача вывести в консоль строку "Я люблю JS !" из массива,
-    проходя циклом в обратном порядкуе, не используя метод revers.
-    const arr = ['!', 'JS', 'люблю', 'Я'];
+    Есть выгрузка операций пользователя
+    const operations = [1000, -700, 300, -500, 10000];
+    а так же начальный баланс в 100$
+    Необходимо сделать функции расчета:
+    - Итогового баланса
+    - Наличия отрицательного баланса (если после очередной операции
+        баласн < 0, то выдавать fals)
+    - Расчета среднего расхода и среднего дохода
  */
+const operations = [1000, -700, 300, -500, 10000];
 
-const arr = ['!', 'JS', 'люблю', 'Я'];
-
-let newArray = [];
-
-for (let i = arr.length - 1; i >= 0; i--) {
-    newArray.push(arr[i]);
-
+function sum() {
+    let sumop = 100;
+    for (let i = 0; i < operations.length; i++) {
+        sumop += operations[i];
+    }
+    return console.log(sumop)
 }
-console.log(newArray.join(' '));
-console.log(arr.reverse().join(' '));
+sum()
+
+function balance() {
+    let sumop = 100;
+    for (let i = 0; i < operations.length; i++) {
+        sumop += operations[i];
+        if (sumop < 0) {
+            return console.log(false);
+        }
+    }
+    return console.log('Отрицательного баланса не было')
+}
+balance()
